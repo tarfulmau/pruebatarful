@@ -1,0 +1,550 @@
+/*
+ Theme Name:   Tarful
+ Theme URI:    http://www.tarful.com
+ Description:  My first child theme, based on Twenty Fifteen
+ Author:       Tarful Dev - Maureen Hernandez
+ Author URI:   
+ Template:     twentyfifteen
+ Version:      1.0.0
+ Tags:         
+ Text Domain:  tarful
+*/
+
+/**
+ * Table of Contents
+ *
+ * 1.0 - Reset
+ * 2.0 - Genericons
+ * 3.0 - Typography
+ * 4.0 - Elements
+ * 5.0 - Forms
+ * 6.0 - Navigations
+ *   6.1 - Links
+ *   6.2 - Menus
+ * 7.0 - Accessibility
+ * 8.0 - Alignments
+ * 9.0 - Clearings
+ * 10.0 - Header
+ * 11.0 - Widgets
+ * 12.0 - Content
+ *    12.1 - Posts and pages
+ *    12.2 - Post Formats
+ *    12.3 - Comments
+ * 13.0 - Footer
+ * 14.0 - Media
+ *    14.1 - Captions
+ *    14.2 - Galleries
+ * 15.0 - Media Queries
+ *    15.1 - Mobile Large
+ *    15.2 - Tablet Small
+ *    15.3 - Tablet Large
+ *    15.4 - Desktop Small
+ *    15.5 - Desktop Medium
+ *    15.6 - Desktop Large
+ *    15.7 - Desktop X-Large
+ */
+
+@import url("../twentyfifteen/rtl.css");
+
+/**
+ * 1.0 - Reset
+ *
+ * Resetting and rebuilding styles have been helped along thanks to the fine work of
+ * Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+ * along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+ * and Blueprint http://www.blueprintcss.org/
+ */
+
+
+h1, h2, h3, h4, h5 {
+	font-family: "bebasneue-bold";
+	text-transform: uppercase;
+	 clear: both;
+    font-weight: 300;
+}
+
+h1{
+	font-size: 32px;
+}
+
+h3{
+	font-size: 26px;
+}
+
+a{
+	color: white;
+	letter-spacing: 0.2px;
+	font-family: "bebasneue-bold";
+}
+
+.mcenter{
+	margin: 0px auto;
+	float: none;
+}
+
+body:before,
+#sidebar{
+	display:none;
+}
+
+body{
+	color: white;
+}
+
+
+.site-content {
+	margin: 0 auto;
+	float: none;
+	width: 100%;
+	max-width: 1440px;
+}
+
+.site-header {
+    background-color: transparent ;
+    border-bottom: none  ;
+    margin: 0px ;
+    padding: 0px ;
+}
+
+/**********************************************************
+ 10.0 - Header 
+**********************************************************/
+
+.top-navigation {
+ clear: both;
+ margin: 0 auto;
+ min-height: 45px;
+ position: relative;
+float: left;
+}
+
+
+.top-navbar .col-lg-1{
+	margin-left: 5%;
+	padding: 12px 0px;
+}
+ 
+ul.top-nav-menu,
+div.top-nav-menu > ul {
+ margin: 0;
+ padding: 0 40px 0 0;
+}
+ 
+.top-nav-menu li {
+ display: inline-block;
+ position: relative;
+ float: left;
+ padding: 0px 20px;
+}
+ 
+.top-nav-menu li a, ul, .site-footer ul {
+ color: white;
+ display: block;
+ font-size: 16px;
+ line-height: 2.5;
+ padding: 15px 20px;
+ text-decoration: none;
+ text-transform: uppercase;
+ font-family: "bebasneue-bold"
+}
+
+
+
+.top-nav-menu li:hover > a,
+.top-nav-menu li a:hover,
+.top-nav-menu li:focus > a,
+.top-nav-menu li a:focus {
+ background-color: #181c23;
+ color: #fff;
+}
+ 
+.top-nav-menu .sub-menu,
+.top-nav-menu .children {
+ background-color: rgba(154,154,154,0.8);
+ border: 2px solid #f7f5e7;
+ border-top: 0;
+ padding: 0;
+ position: absolute;
+ left: -2px;
+ z-index: 99999;
+ height: 1px;
+ width: 1px;
+ overflow: hidden;
+ clip: rect(1px, 1px, 1px, 1px);
+}
+ 
+.top-nav-menu .sub-menu ul,
+.top-nav-menu .children ul {
+ border-left: 0;
+ left: 100%;
+ top: 0;
+}
+ 
+ul.top-nav-menu ul a,
+.top-nav-menu ul ul a {
+ color: #fff;
+ margin: 0;
+ width: 200px;
+}
+ 
+ul.top-nav-menu ul a:hover,
+.top-nav-menu ul ul a:hover,
+ul.top-nav-menu ul a:focus,
+.top-nav-menu ul ul a:focus {
+ background-color: rgba(154,154,154,0.8);
+}
+ 
+ul.top-nav-menu li:hover > ul,
+.top-nav-menu ul li:hover > ul,
+ul.top-nav-menu .focus > ul,
+.top-nav-menu .focus > ul {
+ clip: inherit;
+ overflow: inherit;
+ height: inherit;
+ width: inherit;
+}
+ 
+.top-nav-menu .current_page_item > a,
+.top-nav-menu .current_page_ancestor > a,
+.top-nav-menu .current-menu-item > a,
+.top-nav-menu .current-menu-ancestor > a {
+ color: #111111;
+ font-style: italic;
+}
+ 
+/* Navbar */
+.top-navbar {
+ background-color:#1b202c;
+ margin: 0 auto;
+ width: 100%;
+ position:absolute;
+ z-index:1; 
+}
+
+/**********************************************************
+12.0 - Content
+**********************************************************/
+
+								/*********
+								  -Home-
+								*********/
+.site {
+ margin: 0 auto;
+ max-width: 100%;
+}
+
+.site-main {
+    padding-top: 5%;
+}
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    width: 100%;
+}
+
+.carousel-caption {
+    right: auto;
+    left: 3%;
+    text-align: left;
+}
+
+.carousel-caption h1 , .carousel-caption h3 {
+	padding: 1.4% 0px;
+}
+
+.carousel-caption h1 span{
+	padding: 1.4% 0px;
+	font-size: 24px;
+	font-family: "bebasneue-regular";
+
+}
+.carousel-indicators {
+    left: auto;
+    padding-left: 0px;
+    margin-left: 0px;
+    right: 3%;
+    text-align: right ;
+}
+
+.carousel-indicators .active {
+	width: 10px;
+	height: 10px;
+    background-color: #e74c3c;
+}
+.carousel-indicators li {
+	border: none;
+	background-color: white;
+}
+
+.avalaible{
+	background-color: #e74c3c;
+	color: white;
+	text-transform: uppercase;
+	border-radius: 3px;
+	padding: 3px 2%;
+	font-size: 18px;
+	font-family: "bebasneue-regular";
+	width: 250px;
+	float: left;
+
+	-webkit-box-shadow: 0px 3px 0px 0px rgba(179,46,32,1);
+	-moz-box-shadow: 0px 3px 0px 0px rgba(179,46,32,1);
+	box-shadow: 0px 3px 0px 0px rgba(179,46,32,1);
+	
+}
+
+.avalaible a{
+	float: right;
+}
+
+.category {
+	background-color: #ffcc00;
+	color: #977901;
+	text-transform: uppercase;
+	border-radius: 3px;
+	display: inline;
+	padding: 3px 2%;
+	float: left;
+}
+
+.location{
+	display: inline;
+	padding: 0px 2%;
+}
+
+.location a , .category a{
+	text-transform: uppercase;
+	font-size: 15px;
+	text-align: center;
+	font-weight: 300;
+
+}
+
+
+.category a{
+	color: #816701;
+	padding: 0px;
+	vertical-align: middle;
+}
+
+.recent-products{
+	padding: 3% 0px;
+}
+
+.recent-products img{
+	width: 100%;
+}
+
+.product{ /* cambiar esto a product*/
+	padding-top: 2.5%;
+}
+
+.recent-products .avalaible{
+	position: absolute;
+	top: 30px;
+	width: auto;
+	border-radius: 0px;
+	-webkit-box-shadow:none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+.promise-tag{
+	border: solid 2px white;
+	border-radius: 3px;
+	position: absolute;
+	bottom: 28px;
+	text-align: center;
+	left: 22.5%;
+	padding: 2%;
+}
+
+.recent-products .carousel-caption{
+	bottom: -25px;
+	padding-left: 3%;
+	max-width: 80%;
+} 
+
+.recent-products .location a , .recent-products  .category a {
+	font-family: 14px;
+}
+
+.btn-block{
+	width: 100% !important;
+}
+
+.social{
+	padding-top: 4%;
+}
+
+.social .col-lg-6{
+	text-align: center;
+}
+
+.social .caption{
+position: absolute;
+top: 1%;
+left: 15%;
+padding: 7% 0px;
+width: 70%;
+}
+
+
+
+.caption .form-inline{
+	padding-top: 15%;
+}
+
+.caption h2{
+	font-size: 28px;
+	font-family: "bebasneue-regular";
+	line-height: 1.5; 
+}
+
+.hasthag{
+	font-family: 'Permanent Marker', cursive !important;
+}
+
+.form-inline .form-control {
+   width: 250px;
+    text-align: center;
+}
+
+.caption .avalaible{
+	float: right;
+	width: 30%;
+}
+
+.caption .avalaible a{
+	font-size: 18px;
+}
+
+.social-icons{
+	padding-top: 10%;
+	padding-left: 22.5%;
+}
+
+.social-icons .FB, .social-icons .TW, .social-icons .IN{
+	height: 50px;
+	width: 50px;
+	border-radius: 3px;
+}
+
+.social-icons .IN{
+	margin-top: 0px;
+}
+/**********************************************************
+ 13.0 - Footer
+**********************************************************/
+
+.entry-footer{
+	display: block;
+}
+
+.site-footer{
+	margin: 0px auto;
+	float: none;
+	padding: 0px;
+	width: 100%;
+	background-color: #1c212a;
+}
+
+.site-footer ul{
+	list-style: none;
+	text-align: left;
+	line-height: 1.7;
+
+}
+
+.social-n .col-lg-5, .social-n .col-xs-5, .social-n .col-sm-5, .social-n .col-md-5{
+	margin-bottom: 2%;
+	margin-right: 2%;
+	font-size: 15px;
+	font-family: "bebasneue-regular";
+	border-radius:3px;
+	height: 28px;
+
+}
+
+.FB{
+	background-color: #3b5998;
+	-webkit-box-shadow: 0px 3px 0px 0px #162a55;
+	-moz-box-shadow: 0px 3px 0px 0px #162a55;
+	box-shadow: 0px 3px 0px 0px #162a55;
+
+}
+
+.TW{
+	background-color: #55acee;
+	-webkit-box-shadow: 0px 3px 0px 0px #3b86bf;
+	-moz-box-shadow: 0px 3px 0px 0px #3b86bf;
+	box-shadow: 0px 3px 0px 0px #3b86bf;
+}
+
+.IN{
+	background-color: #316198;
+	-webkit-box-shadow: 0px 3px 0px 0px ;
+	-moz-box-shadow: 0px 3px 0px 0px #243b6a;
+	box-shadow: 0px 3px 0px 0px #243b6a;
+	margin-top: 6%;
+	
+}
+
+.site-footer .col-lg-5, .site-footer .col-sm-5, .site-footer .col-md-5{
+	padding-left:5px;
+	padding-right: 5px;
+	margin-right: 6%;
+}	
+
+.site-footer .container{
+	padding-top: 6%;
+}
+
+
+.FB h5{
+	background: transparent url("images/FB.png") no-repeat scroll 0% 0%;;
+
+}
+.TW h5{
+	background: transparent url("images/TW.png") no-repeat scroll 0% 0%;
+
+}
+.IN h5{
+	background: transparent url("images/IN.png") no-repeat scroll 0% 0%;
+}
+
+.FB h5, .TW h5, .IN h5{
+	background-size: auto;
+	line-height: 2;
+	padding-left: 10%;
+	text-align: center;
+}
+
+.credits{
+	text-align: center;
+	font-size: 15px;
+	color: #5a6374;
+	text-transform: uppercase;
+	padding: 6% 0px 2%;
+}
+
+.credits h5{
+	line-height: 1.5;
+	font-family: "bebasneue-regular";
+}
+
+.social-n{
+	padding-top: 2%;
+}
+
+
+
+
+
+@media (min-width: 1440px) {
+
+		.limit{
+			max-width: 1440px;
+			margin: 0px auto;
+			float: none;	
+		}
+}
