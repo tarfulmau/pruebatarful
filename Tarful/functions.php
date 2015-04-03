@@ -24,22 +24,19 @@ function remove_sidebars() {
 }
 add_action( 'widgets_init', 'remove_sidebars', 11 );
 
-// Add currency / symbol
-add_filter( 'woocommerce_currencies', 'add_my_currency' );
 
-function add_my_currency( $currencies ) {
-     $currencies['VEF'] = __( 'Bolivar Fuerte - Venezuela (Bs)', 'woocommerce' );
-     return $currencies;
+ /*// Funcion a nuestro gusto que queramos incluir
+function favicon_link() {
+    echo '<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />' . "\n";
 }
+add_action( 'wp_head', 'favicon_link' );
 
-add_filter('woocommerce_currency_symbol', 'add_my_currency_symbol', 10, 2);
-
-function add_my_currency_symbol( $currency_symbol, $currency ) {
-     switch( $currency ) {
-          case 'VEF': $currency_symbol = '<span class="money-currency-symbol">Bs. </span>'; break;
-     }
-     return $currency_symbol;
-}
+//función sobreescribe una que ya existe en el tema padre
+if ( ! function_exists( 'theme_special_nav' ) ) {
+    function theme_special_nav() {
+        //  Hacer algo.
+    }
+}*/
 
 
  ?>
