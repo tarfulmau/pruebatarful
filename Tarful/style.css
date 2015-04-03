@@ -70,6 +70,9 @@ h1{
 h3{
 	font-size: 26px;
 }
+h4{
+	font-size: 0.95em;
+}
 
 a{
 	color: white;
@@ -145,7 +148,8 @@ div.top-nav-menu > ul {
  padding: 15px 20px;
  text-decoration: none;
  text-transform: uppercase;
- font-family: "bebasneue-bold"
+ font-family: "bebasneue-bold";
+ border-top: solid 2px transparent;
 }
 
 
@@ -156,6 +160,7 @@ div.top-nav-menu > ul {
 .top-nav-menu li a:focus {
  background-color: #181c23;
  color: #fff;
+  border-top: solid 2px #ff3333;
 }
  
 .top-nav-menu .sub-menu,
@@ -192,6 +197,7 @@ ul.top-nav-menu ul a:hover,
 ul.top-nav-menu ul a:focus,
 .top-nav-menu ul ul a:focus {
  background-color: rgba(154,154,154,0.8);
+
 }
  
 ul.top-nav-menu li:hover > ul,
@@ -220,6 +226,62 @@ ul.top-nav-menu .focus > ul,
  position:absolute;
  z-index:1; 
 }
+
+.menu-account{
+	line-height: 3.5;
+}
+
+.menu-cart:active,
+.menu-cart:hover{
+	background: white;
+}
+
+.menu-account img{
+	/*margin-top: 40%;*/
+}
+
+.menu-cart{
+	border-left: solid 1px;
+}
+.cart-contents{
+	position: absolute;
+	top: 35px;
+	background: #ff3333;
+	border-radius: 30px;
+	line-height: 0.5;
+	padding: 10% 10%;
+	font-size: 11px;
+	left: 35px;
+}
+
+.menu-account h5{
+	padding-top: 50%;
+	text-align: center;
+	font-size: 15px;
+}
+
+.top-nav-menu .sub-menu, .top-nav-menu .children {
+    border-width: 0px;
+    border-style: none solid solid;
+    border-color: none;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    padding: 0px;
+    position: absolute;
+    left: -2px;
+    z-index: 99999;
+    height: 1px;
+    width: 100%;
+    overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    clip: rect(100%, 100%) ;
+    background-color: #181c23;
+}
+
 
 /**********************************************************
 12.0 - Content
@@ -257,7 +319,7 @@ ul.top-nav-menu .focus > ul,
 	font-family: "bebasneue-regular";
 
 }
-.carousel-indicators {
+.page-id-2 .carousel-indicators {
     left: auto;
     padding-left: 0px;
     margin-left: 0px;
@@ -269,11 +331,15 @@ ul.top-nav-menu .focus > ul,
 	width: 10px;
 	height: 10px;
     background-color: #e74c3c;
+    margin: 0px 10px;
+  
 }
-.carousel-indicators li {
+.carousel-indicators li{
 	border: none;
 	background-color: white;
+	margin: 0px 10px;
 }
+
 
 .avalaible{
 	background-color: #e74c3c;
@@ -319,7 +385,6 @@ ul.top-nav-menu .focus > ul,
 
 }
 
-
 .category a{
 	color: #816701;
 	padding: 0px;
@@ -334,7 +399,7 @@ ul.top-nav-menu .focus > ul,
 	width: 100%;
 }
 
-.product{ /* cambiar esto a product*/
+.page-id-2 .product{
 	padding-top: 2.5%;
 }
 
@@ -372,65 +437,200 @@ ul.top-nav-menu .focus > ul,
 	width: 100% !important;
 }
 
-.social{
-	padding-top: 4%;
+								/*********
+							 -Product Detail-
+								*********/
+
+.twentyfifteen .t15wc {
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+    padding: 0px;
+    margin-bottom: 0px;
+    background-color: #f4f4f4;
 }
 
-.social .col-lg-6{
+.woocommerce-page {
+	color: black;
+}
+
+.woocommerce div.product div.images img {
+    height: 450px;
+}
+
+.woocommerce #content div.product div.images, .woocommerce div.product div.images, .woocommerce-page #content div.product div.images, .woocommerce-page div.product div.images {
+    float: left;
+    width: 100%;
+}
+
+.woocommerce div.product .product_title {
+    clear: none;
+    margin-top: 0px;
+    padding: 0px 0px 1%;
+    float: left;
+}
+
+.woocommerce div.product {
+    margin-bottom: 0px;
+    position: relative;
+    padding: 4% 0px;
+}
+
+.woocommerce div.product .category {
+    float: right;
+}
+
+.woocommerce div.product .carousel-indicators {
+    bottom: 0px;
+}
+
+.product-desc, .product-includes, .zoi-promise-flyer, .terms-flyer , .product-info {
+	text-align: left;
+	float: left;
+	background-color: white;
+	border: solid 2px #ebebeb;
+	padding: 2% 2%;
+	margin-bottom: 2em;
+}
+
+.terms-flyer{
+	background-color: transparent;
+	border: none;
+}
+.product-desc h3, .product-includes h3, .zoi-promise-flyer h3, .zoi-promise-flyer h4, .terms-flyer h3{
+	font-family: "bebasneue-regular";
+	padding: 2% 0px;
+}
+
+.product-desc p, .product-includes ul, .zoi-promise-flyer ul, .terms-flyer p{
+	font-family: "GothamHTFThinRegular";
+	font-size: 14px;
+	color: #6b6b6b;
+	text-align: left;
+	text-transform: none;
+	line-height: 1.8;
+}
+
+.guru img{
+	float: left;
+}
+.guru h5{
+	display: inline-block;
+	padding-left: 1%;
+}
+
+.product-includes ul li, .zoi-promise-flyer ul li {
+	list-style-image: url("images/check.png");
+}
+
+.zoi-promise-flyer{
+	background: white url("images/stamp_.png") no-repeat;
+	background-position: right bottom;
+}
+
+.zoi-promise-flyer h3{
 	text-align: center;
 }
 
-.social .caption{
-position: absolute;
-top: 1%;
-left: 15%;
-padding: 7% 0px;
-width: 70%;
+.promise-layout{
+	-webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
 }
 
-
-
-.caption .form-inline{
-	padding-top: 15%;
+.terms-flyer a , .zoi-promise-flyer a {
+	font-family: inherit;
+	color: #e74c3c;
+	text-decoration: underline;
 }
 
-.caption h2{
-	font-size: 28px;
-	font-family: "bebasneue-regular";
-	line-height: 1.5; 
-}
-
-.hasthag{
-	font-family: 'Permanent Marker', cursive !important;
-}
-
-.form-inline .form-control {
-   width: 250px;
-    text-align: center;
-}
-
-.caption .avalaible{
+.zoi-promise-flyer a{
 	float: right;
-	width: 30%;
+	padding-right: 30%;
+	font-family: "GothamHTFThinRegular";
+	font-size: 14px;
+	text-transform: none;
 }
 
-.caption .avalaible a{
+.product-info {
+    background: #F9F9F9 none repeat scroll 0% 0%;
+    margin: 43px 0px 0px 2em;
+    height: 455px;
+}
+
+.product-info h4, .date p span{
+	color: #a0a0a0;
+	font-family: "bebasneue-regular"
+} 
+
+.date p span{
+	padding-left: 1%;
+}
+
+.product-info p{
+	font-family: "bebasneue-regular";
+	margin-bottom: 0px;
 	font-size: 18px;
+	padding: 2% 0px;
 }
 
-.social-icons{
-	padding-top: 10%;
-	padding-left: 22.5%;
+.place a, .av{
+    font-size: 12px;
+    color: #e74c3c;
+    text-decoration: underline;
+    padding-left: 1%;
+    font-family: "bebasneue-regular"
 }
 
-.social-icons .FB, .social-icons .TW, .social-icons .IN{
-	height: 50px;
-	width: 50px;
-	border-radius: 3px;
+.product-info .date, .product-info .place, .product-info .skills , .product-info .buy-info{
+	margin-bottom: 1em;
+} 
+
+.skills .col-xs-6,.skills .col-sm-6 ,.skills .col-md-6,.skills  .col-lg-6{
+	padding-left: 0px;
+	padding-right: 0px;
 }
 
-.social-icons .IN{
-	margin-top: 0px;
+.skills {
+	background: transparent url("images/barra.png") repeat-x scroll 0% 0%;
+	padding-top: 7%; 
+}
+
+.buy-info{
+	padding:20% 0px;
+}
+
+.buy-info .avalaible{
+	width: 70%;
+	float: right;
+
+}
+
+.woocommerce .quantity .qty {
+    width: 3em;
+    text-align: center;
+    line-height: 1.7;
+    margin-top: 3px;
+}
+
+.amount{
+	font-family: "bebasneue-regular";
+	font-size: 18px;
+	font-weight: 300;
+
+}
+ 
+.buy-info .avalaible h4{
+	display: inline-block;
+	/*float: right;*/
+	padding-left: 1%;
+	font-family: "bebasneue-bold";
+	color: white;
+	line-height: 1.4;
+}
+.av{
+	font-size: 18px;
+	text-align: center;
 }
 /**********************************************************
  13.0 - Footer
@@ -438,6 +638,7 @@ width: 70%;
 
 .entry-footer{
 	display: block;
+	color: white;
 }
 
 .site-footer{
@@ -448,75 +649,52 @@ width: 70%;
 	background-color: #1c212a;
 }
 
-.site-footer ul{
-	list-style: none;
-	text-align: left;
-	line-height: 1.7;
-
+.footer-post{
+	font-family: "bebasneue-book"
 }
 
-.social-n .col-lg-5, .social-n .col-xs-5, .social-n .col-sm-5, .social-n .col-md-5{
-	margin-bottom: 2%;
-	margin-right: 2%;
-	font-size: 15px;
-	font-family: "bebasneue-regular";
-	border-radius:3px;
-	height: 28px;
 
+.site-footer .avalaible{
+	float: right;
+	width: 40%;
+}
+
+.site-footer .avalaible a{
+	font-size: 18px;
+}
+
+
+.hashtag{
+	font-family: 'Permanent Marker', cursive !important;
+	line-height: 2;
+}
+
+.site-footer .form-inline .form-control {
+   width: 250px;
+   text-align: center;
+}
+
+.newsletter{
+	padding: 8% 8%;
+	text-align: left;
+}
+
+.social{
+	text-align: center;
+	padding: 4% 2% 12%; 
+}
+.FB, .TW,.IN{
+	height: 40px;
 }
 
 .FB{
-	background-color: #3b5998;
-	-webkit-box-shadow: 0px 3px 0px 0px #162a55;
-	-moz-box-shadow: 0px 3px 0px 0px #162a55;
-	box-shadow: 0px 3px 0px 0px #162a55;
-
+	background: transparent url("images/FB.png") no-repeat;
 }
-
-.TW{
-	background-color: #55acee;
-	-webkit-box-shadow: 0px 3px 0px 0px #3b86bf;
-	-moz-box-shadow: 0px 3px 0px 0px #3b86bf;
-	box-shadow: 0px 3px 0px 0px #3b86bf;
-}
-
 .IN{
-	background-color: #316198;
-	-webkit-box-shadow: 0px 3px 0px 0px ;
-	-moz-box-shadow: 0px 3px 0px 0px #243b6a;
-	box-shadow: 0px 3px 0px 0px #243b6a;
-	margin-top: 6%;
-	
+	background: transparent url("images/IN.png") no-repeat;
 }
-
-.site-footer .col-lg-5, .site-footer .col-sm-5, .site-footer .col-md-5{
-	padding-left:5px;
-	padding-right: 5px;
-	margin-right: 6%;
-}	
-
-.site-footer .container{
-	padding-top: 6%;
-}
-
-
-.FB h5{
-	background: transparent url("images/FB.png") no-repeat scroll 0% 0%;;
-
-}
-.TW h5{
-	background: transparent url("images/TW.png") no-repeat scroll 0% 0%;
-
-}
-.IN h5{
-	background: transparent url("images/IN.png") no-repeat scroll 0% 0%;
-}
-
-.FB h5, .TW h5, .IN h5{
-	background-size: auto;
-	line-height: 2;
-	padding-left: 10%;
-	text-align: center;
+.TW{
+	background: transparent url("images/TW.png") no-repeat;
 }
 
 .credits{
@@ -524,7 +702,8 @@ width: 70%;
 	font-size: 15px;
 	color: #5a6374;
 	text-transform: uppercase;
-	padding: 6% 0px 2%;
+	padding: 7% 0px 2%;
+	background: transparent url("images/bar.png") repeat-x;
 }
 
 .credits h5{
@@ -532,12 +711,17 @@ width: 70%;
 	font-family: "bebasneue-regular";
 }
 
-.social-n{
-	padding-top: 2%;
+.credits .list-inline{
+	font-size: 15px;
+	font-family: "bebasneue-bold";
+	padding-bottom: 3%;
 }
 
-
-
+.list-inline > li {
+    display: inline-block;
+    padding-right: 35px;
+    padding-left: 35px;
+}
 
 
 @media (min-width: 1440px) {
